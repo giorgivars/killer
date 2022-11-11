@@ -165,7 +165,7 @@ client.on("message", async (msg) => {
         if(updating == true){
             return Embed("Bot","Updating Bot Please Try Again In Some Minutes")
         }
-        if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1031491181206569001"){
+        if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1040556910035882054"){
             return error("You Dont Have Permission To Do That")
         }
             if (!check("ADMINISTRATOR")) return error("SetTier", "**You Dont Have Permission To Do That**")
@@ -195,7 +195,7 @@ client.on("message", async (msg) => {
         if(updating == true){
             return Embed("Bot","Updating Bot Please Try Again In Some Minutes")
         }
-        if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1031491181206569001"){
+        if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1040556910035882054"){
             return error("You Dont Have Permission To Do That")
         }
         try{
@@ -226,7 +226,7 @@ client.on("message", async (msg) => {
             if(updating == true){
                 return Embed("Bot","Updating Bot Please Try Again In Some Minutes")
             }
-            if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1031491181206569001"){
+            if(devmode == true && !check("MANAGE_MESSAGES")&& !Number(msg.channel.id) == "1040556910035882054"){
                 return error("You Dont Have Permission To Do That")
             }
             if (!cmddata.get(`${msg.member.user.id}${msg.guild.id}Tier`) || cmddata.get(`${msg.member.user.id}${msg.guild.id}Tier`) < 1) return error("Bot Start", `You Dont Have Permissions To Bot!`)
@@ -285,7 +285,7 @@ client.on("message", async (msg) => {
             if(updating == true){
                 return Embed("Bot","Updating Bot Please Try Again In Some Minutes")
             }
-            if(devmode == true && !check("ADMINISTRATOR") && !Number(msg.channel.id) == "1031491181206569001"){
+            if(devmode == true && !check("ADMINISTRATOR") && !Number(msg.channel.id) == "1040556910035882054"){
                 return error("You Dont Have Permission To Do That")
             }
             if (!cmddata.get(`${msg.member.user.id}${msg.guild.id}Tier`) || cmddata.get(`${msg.member.user.id}${msg.guild.id}Tier`) < 1) return error("Bot Start", `You Dont Have Permissions To Bot!`)
