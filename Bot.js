@@ -590,4 +590,4 @@ setInterval(() => {
         }
     }
 }, 50)
-client.login("MTAzMTQ5MTE4MTIwNjU2OTAwMQ.GBkdnK.OIlWVnISP-Crb-FAQ5mbN5dqdaF2_g13ORAS4k");
+client.login("");
