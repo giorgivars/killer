@@ -11,6 +11,8 @@ const client = new Client({
 let checkinterval;
 let updating = false
 let BotData
+let token = ""
+let serverid = ""
 let disabledcmd = []
 let restarted = 0
 cmddata.get(`84416519844165498416584165498165189165198416`) ? (BotData = cmddata.get(`84416519844165498416584165498165189165198416`)["gay"],restarted = 1) : BotData = []
@@ -91,7 +93,7 @@ setTimeout(()=>{
 */
 //we gonna use quick.db for data store kk
 client.on("message", async (msg) => {
-    if (msg.guild.id !== "1031491084121030656") return
+    if (msg.guild.id !== process.env.serverid) return
     const prefix = "-"
     const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase()
@@ -590,4 +592,4 @@ setInterval(() => {
         }
     }
 }, 50)
-client.login("");
+client.login(process.env.token);
