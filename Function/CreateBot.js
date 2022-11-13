@@ -1592,10 +1592,6 @@ class Create {
                                         Message2 = true
                                         break;
 									case 5:
-                                        Bot.ServerFull = true
-                                        setTimeout(() => {
-                                            Bot.ServerFull = false
-                                        }, 2000)
                                         break;
                                     case 25:
                                         for (var i = 0; i < Bot.botsid.length; i++) {
@@ -1664,17 +1660,15 @@ class Create {
 }
 let modee = [];
 
-axios.get("https://cdn.discordapp.com/attachments/1025743380610822165/1040552890982486057/proxyscrape_premium_http_proxies_7.txt").then(res => {
+axios.get("https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all").then(res => {
     proxies = res.data.split("\n")
 
     let GetProx = () => {
         const ma = setInterval(() => {
             servers.ForEach((server) => {
                 let Bot = server.bots[Math.floor(Math.random() * server.bots.length)]
-                
-                for (var i = 0; i < 50; i++) {
+                for (var i = 0; i < 100; i++) {
                     if (Bot.Actived == true && Bot.Mode !== "afk") {
-						if (Bot.ServerFull) return
                         const proxy = proxies[Math.floor(Math.random() * proxies.length)];
                         const options = url.parse("http://" + proxy);
                         const agent = new proxyAgent(options);
@@ -1682,7 +1676,7 @@ axios.get("https://cdn.discordapp.com/attachments/1025743380610822165/1040552890
                     }
                 }
             })
-        }, 500)
+        }, 200)
         BigInt.push(ma)
     }
     GetProx()
