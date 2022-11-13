@@ -12,9 +12,9 @@ import { naleg1 } from "./Maps/PathfindMap/LegNaMap.js"
 import { euleg1 } from "./Maps/PathfindMap/LegEuMap.js"
 import { asleg1 } from "./Maps/PathfindMap/LegAsMap.js"
 import { zmamap } from "./Maps/PathfindMap/zmamap.js"
-let bros,tokens=[],Map_,forestok=!0,forestokk=!0,glitchedtokens=[],Options=JSON.parse(fs.readFileSync("./Options.json","utf8")),proxies,servers=[],serverss=[],blacklisted=[],name=["pp"];Array.prototype.ForEach=function(t){for(var o=0;o<this.length;o++)t(this[o],o)},Array.prototype.has=function(e){let r=!1;return this.ForEach((t,o)=>{t==e&&(r=o)}),r};
+let bros,tokens=[],Map_,forestok=!0,forestokk=!0,glitchedtokens=[],Options=JSON.parse(fs.readFileSync("./Options.json","utf8")),proxies,servers=[],serverss=[],blacklisted=[];Array.prototype.ForEach=function(t){for(var o=0;o<this.length;o++)t(this[o],o)},Array.prototype.has=function(e){let r=!1;return this.ForEach((t,o)=>{t==e&&(r=o)}),r};
 let allbot = true;
-
+let name=["pp"];//名前
 let getserv = (mode, smt, ok, a) => {
     mode = mode.toLowerCase()
     let rand = Math.floor(Math.random() * 3 + 1)
